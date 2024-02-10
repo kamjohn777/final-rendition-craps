@@ -8,9 +8,14 @@
   }
 
     #right-dice-div {
-        display: flex;
+        /* display: flex;
         width: 57%;
-        justify-content: space-around;
+        justify-content: space-around; */
+        position: relative;
+        /* top: 34%; */
+        display: flex;
+        width: 83%;
+        justify-content: space-evenly;
     }
   
   .dice, .dice-R{
