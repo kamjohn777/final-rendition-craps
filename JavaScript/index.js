@@ -4,8 +4,8 @@ let bankroll1 = 50;
 let bankroll2 = 50;
 
 // elements for active player
-let playerField1 = document.querySelector(".left-field-wrap");
-let playerField2 = document.querySelector(".right-field-wrap");
+let section1 = document.getElementById("sec-1");
+let section2 = document.getElementById("sec-2");
 
 // Get the status elements
 let statusElm = document.getElementById("status");
@@ -34,10 +34,10 @@ document.getElementById("roll-btn").addEventListener("click", function () {
 
   if (currentPlayer === 1) {
     updateDice('dice', count);
-    document.getElementById("h2_count").innerHTML = "Count: " + count;
+    document.getElementById("count-elm").innerHTML = count;
   } else if (currentPlayer === 2){
     updateDice('dice-R', count);
-    document.getElementById("h2_count-R").innerHTML = "Count: " + count;
+    document.getElementById("count-elm-R").innerHTML = count;
   }
 
 
@@ -114,15 +114,15 @@ bankrollElm2.textContent = `Bankroll: $${bankroll2}`;
 //   function for active fields
 function updatePlayerFields() {
     if (currentPlayer === 1) {
-        playerField1.classList.add("active-player");
-        playerField1.classList.remove("inactive-player");
-        playerField2.classList.add("inactive-player");
-        playerField2.classList.remove("active-player");
+       section1.classList.add("active-player");
+       section1.classList.remove("inactive-player");
+       section2.classList.add("inactive-player");
+       section2.classList.remove("active-player");
     } else {
-        playerField2.classList.add("active-player");
-        playerField2.classList.remove("inactive-player");
-        playerField1.classList.add("inactive-player");
-        playerField1.classList.remove("active-player");
+       section2.classList.add("active-player");
+       section2.classList.remove("inactive-player");
+       section1.classList.add("inactive-player");
+       section1.classList.remove("active-player");
     }
 }
 

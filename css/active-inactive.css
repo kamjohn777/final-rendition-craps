@@ -1,0 +1,10 @@
+ /* active styles */
+ .active-player {
+    box-shadow: 0 0 10px 5px #00ff00; /* Green glow */
+}
+
+.inactive-player {
+    opacity: 0.5; /* Darken the field */
+}
+/* end of active style */
+  
