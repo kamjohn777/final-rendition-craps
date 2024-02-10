@@ -7,31 +7,142 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/highLow.css" />
+    <link rel="stylesheet" href="./css/dice_style.css">
     <title>Street Craps</title>
   </head>
   <body>
     <!-- Section 1 -->
     <section id="sec-1">
-        <div id="player-1-box" class="player-box">
-            <img id="player-1-font" class="player-font" src="./assets/Player 1.png" alt="">
-            <img id="player-1-plbox-img" class="player-box-img" src="./assets/Group 12.png" alt="">
-        </div>
+      <div id="player-1-box" class="player-box">
+        <img
+          id="player-1-font"
+          class="player-font"
+          src="./assets/Player 1.png"
+          alt=""
+        />
+        <img
+          id="player-1-plbox-img"
+          class="player-box-img"
+          src="./assets/Group 12.png"
+          alt=""
+        />
+      </div>
 
-        <div class="count-div">
-            <h2>00</h2>
+      <div class="count-div">
+        <h2>00</h2>
+      </div>
+
+      <div class="main-dice-container">
+        <!-- Dice code -->
+      <div id="container">
+        <div id="dice1" class="dice dice-one">
+          <div id="dice-one-side-one" class="face one">
+            <div class="dot-one-1"></div>
+          </div>
+
+          <div id="dice-one-side-two" class="face two">
+            <div class="dot two-1"></div>
+            <div class="dot two-2"></div>
+          </div>
+
+          <div id="dice-one-side-three" class="face three">
+            <div class="dot three-1"></div>
+            <div class="dot three-2"></div>
+            <div class="dot three-3"></div>
+          </div>
+
+          <div id="dice-one-side-four" class="face four">
+            <div class="dot four-1"></div>
+            <div class="dot four-2"></div>
+            <div class="dot four-3"></div>
+            <div class="dot four-4"></div>
+          </div>
+
+          <div id="dice-one-side-5" class="face five">
+            <div class="dot five-1"></div>
+            <div class="dot five-2"></div>
+            <div class="dot five-3"></div>
+            <div class="dot five-4"></div>
+            <div class="dot five-5"></div>
+          </div>
+
+          <div id="dice-one-side-6" class="face six">
+            <div class="dot six-1"></div>
+            <div class="dot six-2"></div>
+            <div class="dot six-3"></div>
+            <div class="dot six-4"></div>
+            <div class="dot six-5"></div>
+            <div class="dot six-6"></div>
+          </div>
         </div>
+      </div>
+
+      <!-- second dice -->
+      <div class="container">
+        <div id="dice2" class="dice dice-two">
+            <div id="dice-two-side-one" class="face one">
+                <div class="dot-one-1"></div>
+              </div>
+    
+              <div id="dice-two-side-two" class="face two">
+                <div class="dot two-1"></div>
+                <div class="dot two-2"></div>
+              </div>
+    
+              <div id="dice-two-side-three" class="face three">
+                <div class="dot three-1"></div>
+                <div class="dot three-2"></div>
+                <div class="dot three-3"></div>
+              </div>
+    
+              <div id="dice-two-side-four" class="face four">
+                <div class="dot four-1"></div>
+                <div class="dot four-2"></div>
+                <div class="dot four-3"></div>
+                <div class="dot four-4"></div>
+              </div>
+    
+              <div id="dice-two-side-5" class="face five">
+                <div class="dot five-1"></div>
+                <div class="dot five-2"></div>
+                <div class="dot five-3"></div>
+                <div class="dot five-4"></div>
+                <div class="dot five-5"></div>
+              </div>
+    
+              <div id="dice-two-side-6" class="face six">
+                <div class="dot six-1"></div>
+                <div class="dot six-2"></div>
+                <div class="dot six-3"></div>
+                <div class="dot six-4"></div>
+                <div class="dot six-5"></div>
+                <div class="dot six-6"></div>
+              </div>
+        </div>
+      </div>
+      <!-- end of second dice -->
+      </div>
+      
     </section>
 
     <img id="rectangle" src="./assets/Rectangle 3.png" alt="" />
 
     <!-- Buttons Container -->
     <div class="btn-container">
-      <div class="title-div"><i class="fas fa-road" style="color: #eff311;"></i>7/11 Street Craps</div>
+      <div class="title-div">
+        <i class="fas fa-road" style="color: #eff311"></i>7/11 Street Craps
+      </div>
 
       <div class="game-controls">
-        <button>
+        <button id="roll-btn">
           <img id="btn-img-3dDice" src="./assets/image 3.png" alt="" />Roll Dice
         </button>
         <button><i class="fas fa-redo" style="color: #4f0082"></i>Reset</button>
