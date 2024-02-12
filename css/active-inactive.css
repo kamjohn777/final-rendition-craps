@@ -1,6 +1,7 @@
  /* active styles */
  .active-player {
-    box-shadow: 0 0 10px 5px #00ff00; /* Green glow */
+    /* box-shadow: 0 0 10px 5px #00ff00;  */
+    opacity: 1;
 }
 
 .inactive-player {
