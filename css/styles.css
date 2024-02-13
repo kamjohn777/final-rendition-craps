@@ -103,6 +103,63 @@ body {
     /* position: relative; */
     height: 280px;
   }
+  #player1-header {
+    position: absolute;
+    top: -16%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 57px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "MORF" 15, "SHLN" 50;
+  }
+
+  #player2-header {
+    position: absolute;
+    top: -13%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 53px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "MORF" 15, "SHLN" 50;
+  }
+
+  .bankRoll-elm-left {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  /* font-family: 'Pixelify Sans', sans-serif; */
+font-family: "Honk", system-ui;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+  "MORF" 15,
+  "SHLN" 50;
+  }
+
+  .bankRoll-elm-right {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    /* font-family: 'Pixelify Sans', sans-serif; */
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+  }
 
   .count-div {
     position: absolute;
@@ -132,6 +189,7 @@ body {
     "MORF" 15,
     "SHLN" 50;
   }
+
 
 .btn-container {
   position: absolute;
@@ -196,7 +254,8 @@ body {
 }
 .status-container {
   position: absolute;
-  top: calc(80% + 85px);
+  /* top: calc(80% + 85px); */
+  top: calc(44% + 85px);
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -209,9 +268,12 @@ body {
   color: white;
   font-size: 15px;
   /* max-width: fit-content; */
-  width: 180px;
+  /* width: 180px; */
+  width: 250px;
+  padding: 3px;
   /* max-width: fit-content; */
   /* box-shadow: 5px 6px 11px #3c103c; */
   align-items: center;
   justify-content: space-evenly;
+  text-align: center;
 }

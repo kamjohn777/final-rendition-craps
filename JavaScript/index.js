@@ -1,7 +1,7 @@
 let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
-let bankroll1 = 50;
-let bankroll2 = 50;
+let bankroll1 = 1000;
+let bankroll2 = 1000;
 
 // elements for active player
 let section1 = document.getElementById("sec-1");
@@ -9,8 +9,8 @@ let section2 = document.getElementById("sec-2");
 
 // Get the status elements
 let statusElm = document.getElementById("status");
-let bankrollElm1 = document.getElementById("BankRoll-h2"); // Assuming you have a similar element for player 2
-let bankrollElm2 = document.getElementById("BankRoll-h2-R"); // Add this to your HTML
+let bankrollElm1 = document.getElementById("BankRoll-h3"); // Assuming you have a similar element for player 2
+let bankrollElm2 = document.getElementById("BankRoll-h3-R"); // Add this to your HTML
 
 
 // Added an event listener to the roll button so it calls a function when clicked
@@ -45,11 +45,11 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} wins with a first roll of ${count}!`;
       if (currentPlayer === 1) {
-        bankroll1 += 5;
-        bankroll2 -= 5; // Subtract 5 from player 2's bankroll
+        bankroll1 += 50;
+        bankroll2 -= 50; // Subtract 5 from player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 += 5;
-        bankroll1 -= 5; // Subtract 5 from player 1's bankroll
+        bankroll2 += 50;
+        bankroll1 -= 50; // Subtract 5 from player 1's bankroll
       }
     } else if (count === 2 || count === 3 || count === 12) {
       console.log(
@@ -57,11 +57,11 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} loses with a first roll of ${count}.`;
       if (currentPlayer === 1) {
-        bankroll1 -= 5;
-        bankroll2 += 5; // Add 5 to player 2's bankroll
+        bankroll1 -= 50;
+        bankroll2 += 50; // Add 5 to player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 -= 5;
-        bankroll1 += 5; // Add 5 to player 1's bankroll
+        bankroll2 -= 50;
+        bankroll1 += 50; // Add 5 to player 1's bankroll
       }
       switchPlayer();
     } else {
@@ -76,22 +76,22 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`;
       if (currentPlayer === 1) {
-        bankroll1 += 5;
-        bankroll2 -= 5; // Subtract 5 from player 2's bankroll
+        bankroll1 += 50;
+        bankroll2 -= 50; // Subtract 5 from player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 += 5;
-        bankroll1 -= 5; // Subtract 5 from player 1's bankroll
+        bankroll2 += 50;
+        bankroll1 -= 50; // Subtract 5 from player 1's bankroll
       }
       pointNumber = null;
     } else if (count === 7) {
       console.log(`Player ${currentPlayer} loses by rolling a 7.`);
       statusElm.textContent = `Player ${currentPlayer} loses by rolling a 7.`;
       if (currentPlayer === 1) {
-        bankroll1 -= 5;
-        bankroll2 += 5; // Add 5 to player 2's bankroll
+        bankroll1 -= 50;
+        bankroll2 += 50; // Add 5 to player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 -= 5;
-        bankroll1 += 5; // Add 5 to player 1's bankroll
+        bankroll2 -= 50;
+        bankroll1 += 50; // Add 5 to player 1's bankroll
       }
       pointNumber = null;
       switchPlayer();
@@ -106,6 +106,7 @@ document.getElementById("roll-btn").addEventListener("click", function () {
 });
 
 function switchPlayer() {
+  // Switch the player
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   console.log(`It's now Player ${currentPlayer}'s turn.`);
   updatePlayerFields();
@@ -132,15 +133,11 @@ function updatePlayerFields() {
     section1.classList.remove("inactive-player");
     section2.classList.add("inactive-player");
     section2.classList.remove("active-player");
-    // Reset the dice position for the inactive player
-    document.getElementById("right-dice").style.transform = "rotateX(-20deg) rotateY(45deg)";
   } else {
     section2.classList.add("active-player");
     section2.classList.remove("inactive-player");
     section1.classList.add("inactive-player");
     section1.classList.remove("active-player");
-    // Reset the dice position for the inactive player
-    document.getElementById("left-dice").style.transform = "rotateX(-20deg) rotateY(45deg)";
   }
 }
 
