@@ -1,0 +1,19 @@
+/* #player2-win-box {
+   
+} */
+
+#trophy-player2 {
+  height: 90px;
+  position: absolute;
+  left: 73%;
+  top: 18%;
+}
+
+#winner-image-2 {
+  position: absolute;
+  display: block;
+  left: 66%;
+  top: 29%;
+  height: 62px;
+  z-index: 100;
+}

@@ -1,7 +1,7 @@
 let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
-let bankroll1 = 1000;
-let bankroll2 = 1000;
+let bankroll1 = 200;
+let bankroll2 = 200;
 
 // elements for active player
 let section1 = document.getElementById("sec-1");
@@ -45,11 +45,11 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} wins with a first roll of ${count}!`;
       if (currentPlayer === 1) {
-        bankroll1 += 50;
-        bankroll2 -= 50; // Subtract 5 from player 2's bankroll
+        bankroll1 += 100;
+        bankroll2 -= 100; // Subtract 5 from player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 += 50;
-        bankroll1 -= 50; // Subtract 5 from player 1's bankroll
+        bankroll2 += 100;
+        bankroll1 -= 100; // Subtract 5 from player 1's bankroll
       }
     } else if (count === 2 || count === 3 || count === 12) {
       console.log(
@@ -57,11 +57,11 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} loses with a first roll of ${count}.`;
       if (currentPlayer === 1) {
-        bankroll1 -= 50;
-        bankroll2 += 50; // Add 5 to player 2's bankroll
+        bankroll1 -= 100;
+        bankroll2 += 100; // Add 5 to player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 -= 50;
-        bankroll1 += 50; // Add 5 to player 1's bankroll
+        bankroll2 -= 100;
+        bankroll1 += 100; // Add 5 to player 1's bankroll
       }
       switchPlayer();
     } else {
@@ -76,22 +76,22 @@ document.getElementById("roll-btn").addEventListener("click", function () {
       );
       statusElm.textContent = `Player ${currentPlayer} wins by rolling the point number ${pointNumber} again!`;
       if (currentPlayer === 1) {
-        bankroll1 += 50;
-        bankroll2 -= 50; // Subtract 5 from player 2's bankroll
+        bankroll1 += 100;
+        bankroll2 -= 100; // Subtract 5 from player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 += 50;
-        bankroll1 -= 50; // Subtract 5 from player 1's bankroll
+        bankroll2 += 100;
+        bankroll1 -= 100; // Subtract 5 from player 1's bankroll
       }
       pointNumber = null;
     } else if (count === 7) {
       console.log(`Player ${currentPlayer} loses by rolling a 7.`);
       statusElm.textContent = `Player ${currentPlayer} loses by rolling a 7.`;
       if (currentPlayer === 1) {
-        bankroll1 -= 50;
-        bankroll2 += 50; // Add 5 to player 2's bankroll
+        bankroll1 -= 100;
+        bankroll2 += 100; // Add 5 to player 2's bankroll
       } else if (currentPlayer === 2) {
-        bankroll2 -= 50;
-        bankroll1 += 50; // Add 5 to player 1's bankroll
+        bankroll2 -= 100;
+        bankroll1 += 100; // Add 5 to player 1's bankroll
       }
       pointNumber = null;
       switchPlayer();
@@ -100,6 +100,25 @@ document.getElementById("roll-btn").addEventListener("click", function () {
 
   bankrollElm1.textContent = `Bankroll: $${bankroll1}`;
   bankrollElm2.textContent = `Bankroll: $${bankroll2}`;
+
+  // Check if a player's bankroll has reached 0
+if (bankroll1 <= 0) {
+  statusElm.textContent = `Player 2 wins! Player 1's bankroll has reached 0.`;
+  document.getElementById("roll-btn").disabled = true; // Disable the roll button
+  document.getElementById("winner-image-2").src = "./assets/Group 17.png";
+  document.getElementById("player-2-plbox-img").src = "./assets/Group 13.png";
+  document.getElementById('player2-header').style.display = 'none'
+  bankrollElm2.style.display = "none"
+  document.getElementById("winner-image-2").style.display = "block";
+} else if (bankroll2 <= 0) {
+  statusElm.textContent = `Player 1 wins! Player 2's bankroll has reached 0.`;
+  document.getElementById("roll-btn").disabled = true; // Disable the roll button
+  document.getElementById("winner-image-1").src = "./assets/Group 17.png";
+  document.getElementById("player-1-plbox-img").src = "./assets/Group 13.png";
+  document.getElementById("player1-header").style.display = "none"
+  bankrollElm1.style.display = "none"
+  document.getElementById("winner-image-1").style.display = "block";
+}
 
   // Update the status elements based on the game state
   //   updateDice('dice', count); // update the first dice
