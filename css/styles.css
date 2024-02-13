@@ -40,12 +40,19 @@ body {
 }
 
 .section-1 {
-    position: absolute;
+    /* position: absolute;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 10%;
+    margin-left: 10%; */
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 10%; */
 }
 
 /* .section-2 {

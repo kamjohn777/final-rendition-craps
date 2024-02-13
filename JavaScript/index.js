@@ -109,6 +109,7 @@ if (bankroll1 <= 0) {
   document.getElementById("player-2-plbox-img").src = "./assets/Group 13.png";
   document.getElementById('player2-header').style.display = 'none'
   bankrollElm2.style.display = "none"
+  document.getElementById("bg-win-vector-right").style.display = "block"
   document.getElementById("winner-image-2").style.display = "block";
 } else if (bankroll2 <= 0) {
   statusElm.textContent = `Player 1 wins! Player 2's bankroll has reached 0.`;
@@ -117,6 +118,7 @@ if (bankroll1 <= 0) {
   document.getElementById("player-1-plbox-img").src = "./assets/Group 13.png";
   document.getElementById("player1-header").style.display = "none"
   bankrollElm1.style.display = "none"
+  document.getElementById("bg-win-vector-left").style.display = "block"
   document.getElementById("winner-image-1").style.display = "block";
 }
 
