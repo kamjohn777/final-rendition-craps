@@ -27,12 +27,12 @@
 }
 
 #winner-image-1 {
-  position: absolute;
-  display: block;
-  left: 66%;
-  top: 29%;
-  height: 62px;
-  z-index: 100;
+    position: absolute;
+    display: block;
+    left: 15%;
+    top: 26%;
+    height: 62px;
+    z-index: 100;
 }
 
 #winner-image-2 {

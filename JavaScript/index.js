@@ -1,7 +1,7 @@
 let currentPlayer = 1; // Start with player 1
 let pointNumber = null; // This will hold the point number if a point is established
 let bankroll1 = 200;
-let bankroll2 = 200;
+let bankroll2 = 100;
 
 // elements for active player
 let section1 = document.getElementById("sec-1");
