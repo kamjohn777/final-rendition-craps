@@ -17,6 +17,15 @@
     display: none;
 }
 
+#trophy-player1 {
+    height: 90px;
+    position: absolute;
+    left: 21%;
+    top: 18%;
+    z-index: 100;
+    display: none;
+}
+
 
 #trophy-player2 {
   height: 90px;
@@ -24,6 +33,7 @@
   left: 73%;
   top: 18%;
   z-index: 100;
+  display: none;
 }
 
 #winner-image-1 {
